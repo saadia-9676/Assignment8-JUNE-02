@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Check Number -Positive or Negative</title>
+  <script>
+    // This runs once the page loads
+    window.onload = function () {
+      let input = prompt("Enter a number :");
+      let number = Number(input);
+      let message = "";
+
+      if (isNaN(number)) {
+        message = "Invalid input.Not a number.";
+      } else if (number > 0) {
+        message = "The number is Positive.";
+      } else if (number < 0) {
+        message = "The number is Negative.";
+      } else {
+        message = "The number is Zero.";
+      }
+
+      document.getElementById("result").textContent = message;
+    }
+  </script>
+</head>
+<body>
+  <h1 id="result"></h1>
+</body>
+</html>

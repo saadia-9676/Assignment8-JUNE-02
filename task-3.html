@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Repeating Text</title>
+  <script>
+    window.onload = function () {
+      let input = prompt("How many times do you want to repeat the text?");
+      let count = Number(input);
+      let output = "";
+
+      if (isNaN(count) || count < 1) {
+        output = "Enter a valid positive number.";
+      } else {
+        for (let i = 1; i <= count; i++) {
+          output += i + ". VitAP Student<br>";
+        }
+      }
+
+      document.getElementById("result").innerHTML = output;
+    }
+  </script>
+</head>
+<body>
+  <h2 id="result"></h2>
+</body>
+</html>
